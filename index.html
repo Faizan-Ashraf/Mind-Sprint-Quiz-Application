@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light d-block">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand text-white"><img src="images/logo.png" alt="logo" width="45px"
+                    height="40px"></a>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                        <a href="subjects.html" class="nav-link" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="#about" class="nav-link" aria-current="page" data-bs-toggle="modal" data-bs-target="#about">About Us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="subjects.html" class="nav-link">Subjects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="#help" class="nav-link" data-bs-toggle="modal" data-bs-target="#help">Help</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="mynav">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a href="subjects.html" class="nav-link" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link" data-bs-toggle="modal" data-bs-target="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="subjects.html" class="nav-link">Subjects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#help" class="nav-link" data-bs-toggle="modal" data-bs-target="#help">Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ms-auto">
+                <a href="signup.html" class="btn btn-primary" id="regbtn">Register</a>
+                
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <div class="modal fade" id="help">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h3 class="modal-title">Instructions:</h3>
+
+                </header>
+                <div class="modal-body">
+                   <ol>
+                    <li class="li">Email should not be empty.</li>
+                    <li class="li">Password should not be empty.</li>
+                    <li class="li">If you don't have an account please register yourself by clicking on "Register" button.</li>
+                    <li class="li">You can take quizzes without login, just select "Subjects" link on navbar.</li>
+                   </ol>
+
+                </div>
+
+                <footer class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="about">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h3 class="modal-title">About Mind Sprint</h3>
+
+                </header>
+                <div class="modal-body">
+                   <img src="images/logo.png" alt="logo" width="50px" height="50px">
+                   <br>Version 1.0.0<br>
+                   <b>Welcome to Mind Sprint!</b><br>
+                   Mind Sprint aims to revolutionize exam preparation with engaging, subject specific quizzes.
+                   <br>
+                   <b>Features</b><br>
+                   Users can sign up, pick their subjects, choose difficulty levels and get instant result and feedback. They can also have personalized dashboard to track their progress.
+                   <br>
+                   <b>Contact Us</b><br>
+                   If you have any question or feedback feel free to reach out at<br>
+                   faizantyu1177@gmail.com
+                   <br>
+
+
+
+                </div>
+
+                <footer class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+        <form action="" class="form p-10" onsubmit="return validate()">
+            <h1>Login</h1><br>
+            <input type="email" placeholder="Email" class="my-3 Input" id="email" spellcheck="false">
+            <p class="me-auto" id="eEmail" ></p>
+            <input type="password" placeholder="Password" class="my-3 Input" spellcheck="false" id="password"><br>
+            <p id="ePassword" class="me-auto"></p>
+            <input type="submit" class="button rounded-2 py-1" value="LOGIN">
+        </form>
+    </div>
+    <script src="js/login.js">
+    </script>
+
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

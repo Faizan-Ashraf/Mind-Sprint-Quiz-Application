@@ -1,0 +1,55 @@
+:root {
+    --c50: #F1F7FD;
+    --c100: #E0EEF9;
+    --c300: #A2CEEE;
+    --c400: #75B3E5;
+    --c500: #5597DC;
+    --c600: #407CD0;
+    --c700: #386BC2;
+    --c800: #32569B;
+
+
+}
+
+/* Main body */
+
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    transition-property: all;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out;
+}
+
+.nav-link {
+
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: grey!important;
+
+}
+
+.nav-link:hover {
+    color: var(--c800) !important;
+
+}
+
+nav {
+    background-color: white;
+
+
+}
+
+#regbtn,#loginbtn{
+    border-radius: 25px!important;
+    background-color: transparent;
+    color: var(--c500);
+    border-color: var(--c500);
+}
+#regbtn:hover,#loginbtn:hover{
+    background-color: var(--c600);
+    color: white;
+    border-color: var(--c600);
+
+}

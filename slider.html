@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    
+</head>
+
+<body style="min-height: 100vh;">
+
+
+    <nav class="navbar navbar-expand-lg d-block">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand text-white"><img src="images/logo.png" alt="logo" width="45px"
+                    height="40px"></a>
+
+
+
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                        <a href="#" class="nav-link" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="subjects.html" class="nav-link">Subjects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#help">Help</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="mynav">
+
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+
+                <div class="offcanvas-body">
+
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="subjects.html" class="nav-link">Subjects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#help">Help</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="ms-auto">
+                <a href="signup.html" class="btn btn-primary" id="regbtn">Register</a>
+                <a href="index.html" class="btn btn-primary" id="loginbtn">Login</a>
+
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </div>
+    </nav>
+
+
+
+
+
+
+    <div class="modal fade" id="help">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h3 class="modal-title">Instructions:</h3>
+
+                </header>
+                <div class="modal-body">
+                    <p style="text-align:justify;">
+
+                        To take this quiz, begin by navigating through the questions using the "Previous" and "Next"
+                        buttons
+                        located below the question area or left and right side of your screen respectively. Each
+                        question is presented within a carousel format, where you can
+                        read the question and select your answer by clicking on one of the provided options (labeled A,
+                        B,
+                        C, or D). The quiz allows you to move back and forth between questions using the navigation
+                        buttons.
+                        Once you have answered all questions to your satisfaction, click the "Submit" button at the
+                        bottom or left side
+                        of the quiz to finalize your responses.<b>Good luck!</b>
+                    </p>
+
+                </div>
+
+                <footer class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container p-4 d-flex align-items-center justify-content-center" id="container"
+        style="min-height: 80vh; margin-top: 30px;">
+
+        <a href="#myCarousel" id="prevButton" class="btn btn-primary" data-bs-slide="prev">Previous</a>
+        <!--prev  button -->
+
+        <div class="row m-3">
+            <div class="col-12">
+
+
+
+                <div class="carousel slide" id="myCarousel">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active ">
+                            <!-- MCQ 1 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+                                        <dl>
+                                            <dt>Question # 1:</dt>
+                                            <dd>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sunt
+                                                dignissimos
+                                                aperiam recusandae nulla eum fuga optio hic doloribus fugiat.
+
+                                            </dd>
+                                        </dl>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option1" id="radio1" class="options">
+                                    <label for="radio1" class="rounded-3">A</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option1" id="radio2" class="options">
+                                    <label for="radio2" class="rounded-3">B</label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option1" id="radio3" class="options answer">
+                                    <label for="radio3" class="rounded-3">C</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option1" id="radio4" class="options">
+                                    <label for="radio4" class="rounded-3">D</label>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="carousel-item  ">
+                            <!-- MCQ 1 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+
+                                        <dl>
+                                            <dt>Question # 2:</dt>
+                                            <dd>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sunt
+                                                dignissimos
+                                                aperiam recusandae nulla eum fuga optio hic doloribus fugiat.
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option2" id="radio5" class="options">
+                                    <label for="radio5" class="rounded-3">A</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option2" id="radio6" class="options">
+                                    <label for="radio6" class="rounded-3">B</label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option2" id="radio7" class="options">
+                                    <label for="radio7" class="rounded-3">C</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option2" id="radio8" class="options answer">
+                                    <label for="radio8" class="rounded-3">D</label>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        <div class="carousel-item">
+                            <!-- MCQ 3 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+
+                                        <dl>
+                                            <dt>Question # 3:</dt>
+                                            <dd>
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sunt
+                                                dignissimos
+                                                aperiam recusandae nulla eum fuga optio hic doloribus fugiat.
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option3" id="radio9" class="options answer">
+                                    <label for="radio9" class="rounded-3">A</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option3" id="radio10" class="options">
+                                    <label for="radio10" class="rounded-3">B</label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option3" id="radio11" class="options">
+                                    <label for="radio11" class="rounded-3">C</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option3" id="radio12" class="options">
+                                    <label for="radio12" class="rounded-3">D</label>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <a href="#myCarousel" id="nextButton" class="btn btn-primary px-4"
+            data-bs-slide="next">Next</a><!--Next  button -->
+
+        <input type="submit" id="submitbtn" class="btn">
+
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/slider.js"></script>
+
+
+
+</body>
+
+</html>

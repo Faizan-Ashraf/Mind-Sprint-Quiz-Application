@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light d-block">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand text-white"><img src="images/logo.png" alt="logo" width="45px"
+                    height="40px"></a>
+
+
+
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                        <a href="#" class="nav-link" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="#about" class="nav-link" data-bs-toggle="modal" data-bs-target="#about">About Us</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="subjects.html" class="nav-link">Subjects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="#help" class="nav-link" data-bs-toggle="modal" data-bs-target="#help">Help</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="mynav">
+
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+
+                <div class="offcanvas-body">
+
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link" data-bs-toggle="modal" data-bs-target="#about">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="subjects.html" class="nav-link">Subjects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#help" class="nav-link" data-bs-toggle="modal" data-bs-target="#help">Help</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <a href="index.html" class="btn btn-primary ms-auto" id="loginbtn">Login</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="help">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h3 class="modal-title">Instructions:</h3>
+
+                </header>
+                <div class="modal-body">
+                   <ol>
+                    <li class="li">Name should not be empty and cannot included special characters</li>
+                    <li class="li">Selection of Faculty is mandatory.</li>
+                    <li class="li">Email should not be empty</li>
+                    <li class="li">Password must not be empty and must contain atleast 8 characters.</li>
+                    <li class="li">Confirm password must match the password</li>
+                    <li class="li">If you already have an account please login by clicking on "Login" button.</li>
+                </ol>
+
+                </div>
+
+                <footer class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="about">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h3 class="modal-title">About Mind Sprint</h3>
+
+                </header>
+                <div class="modal-body" style="text-align: center;">
+                   <img src="images/logo.png" alt="logo" width="50px" height="50px">
+                   <br>Version 1.0.0<br>
+                   <b>Welcome to Mind Sprint!</b><br>
+                   Mind Sprint aims to revolutionize exam preparation with engaging, subject specific quizzes.
+                   <br>
+                   <b>Features</b><br>
+                   Users can sign up, pick their subjects, choose difficulty levels and get instant result and feedback. They can also have personalized dashboard to track their progress.
+                   <br>
+                   <b>Contact Us</b><br>
+                   If you have any question or feedback feel free to reach out at<br>
+                   faizantyu1177@gmail.com
+                   <br>
+
+
+
+                </div>
+
+                <footer class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- form section -->
+    <div class="container-fluid d-flex justify-content-center align-items-center"
+        style="height: 75vh; margin-top: 75px;">
+
+        <form action="signup.html" method="post" style=" width: 100vh;" id="form">
+
+            <div class="container-fluid ">
+
+                <div class="row">
+
+                    <figure class="col-lg-6 col-sm-12 d-flex justify-content-center align-items-center ">
+                        <!-- figure section -->
+
+                        <img src="images/default2.png" alt="" class="img">
+                        <input type="file" accept="image/*" class="d-none">
+
+                    </figure>
+
+
+                    <section class="col-lg-6 col-sm-12 d-flex justify-content-center align-items-center flex-column">
+                        <!-- inputs section -->
+                        <h1>Signup</h1>
+
+                        <input type="text" class="form-control" placeholder="Name" id="name">
+                        <div class="text-danger me-auto ps-1" id="name_error"></div><!--error-->
+
+                        <select name="" id="Faculty" class="form-select mt-2">
+                            <option value="Faculty">Faculty</option>
+                            <option value="FoIT">FoIT</option>
+                            <option value="Law">Law</option>
+                            <option value="Pharm-D">Pharm-D</option>
+                            <option value="MBBS">MBBS</option>
+                        </select>
+                        <div class="text-danger me-auto ps-1" id="faculty_error"></div><!--error-->
+
+                        <input type="email" class="form-control" placeholder="Email" id="email">
+                        <div class="text-danger me-auto ps-1" id="email_error"></div><!--error-->
+
+                        <input type="password" class="form-control" placeholder="Password" id="pass">
+                        <div class="text-danger me-auto ps-1" id="pass_error"></div><!--error-->
+
+                        <input type="password" class="form-control" placeholder="Confirm Password" id="cpass">
+                        <div class="text-danger me-auto ps-1" id="cpass_error"></div><!--error-->
+
+                        <input type="submit" value="SIGN UP" class="py-1 rounded-1">
+
+
+                    </section>
+
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <script src="js/signup.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+:root {
+    --c50: #F1F7FD;
+    --c100: #E0EEF9;
+    --c200: #C8E1F5;
+    --c300: #A2CEEE;
+    --c400: #75B3E5;
+    --c500: #5597DC;
+    --c600: #407CD0;
+    --c700: #386BC2;
+    --c800: #32569B;
+}
+
+/* Main body */
+body {
+    background-color: var(--c100);
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    transition-property: all;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out;
+}
+
+
+.cards {
+    background: linear-gradient(to right bottom, var(--c100), var(--c200));
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.subject-img {
+    height: 150px;
+    width: 120px;
+    border-radius: 4px;
+
+
+}
+
+
+.card {
+    width: 120px;
+    background-color: transparent;
+    border: none;
+    height: 200px;
+    text-decoration: none;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 14px;
+
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bolder;
+    background: linear-gradient(to right, var(--c500), var(--c600));
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0px;
+}

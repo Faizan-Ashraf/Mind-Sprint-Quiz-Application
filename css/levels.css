@@ -1,0 +1,67 @@
+:root {
+    --c50: #F1F7FD;
+    --c100: #E0EEF9;
+    --c300: #A2CEEE;
+    --c400: #75B3E5;
+    --c500: #5597DC;
+    --c600: #407CD0;
+    --c700: #386BC2;
+    --c800: #32569B;
+
+
+}
+
+/* Main body */
+body {
+    background-color: var(--c100);
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    transition-property: all;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out;
+}
+
+
+
+
+.card{
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+
+.easy{
+    background: url(../images/easy.png);
+    box-shadow: 0 3px 5px 0 green;
+}
+
+.intermediate{
+    background: url(../images/intermediate.png);
+    box-shadow: 0 3px 5px 0 lightskyblue;
+}
+
+.hard{
+    background: url(../images/hard.png);
+    box-shadow: 0 3px 5px 0 red;
+}
+
+
+
+.easy,
+.hard,
+.intermediate {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    cursor: pointer;
+}
+
+
+.easy:hover,
+.hard:hover,
+.intermediate:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
+</head>
+
+<body style="min-height: 100vh;">
+
+
+    <nav class="navbar navbar-expand-lg navbar-light d-block">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand text-white"><img src="images/logo.png" alt="logo" width="45px"
+                    height="40px"></a>
+
+
+
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                        <a href="#" class="nav-link" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="subjects.html" class="nav-link">Subjects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#help">Help</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="mynav">
+
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+
+                <div class="offcanvas-body">
+
+                    <ul class="navbar-nav flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="subjects.html" class="nav-link">Subjects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#help">Help</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="ms-auto">
+                <a href="signup.html" class="btn btn-primary" id="regbtn">Register</a>
+                <a href="index.html" class="btn btn-primary" id="loginbtn">Login</a>
+
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mynav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+        </div>
+    </nav>
+
+
+
+
+
+
+    <div class="modal fade" id="help">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h3 class="modal-title">Instructions:</h3>
+
+                </header>
+                <div class="modal-body">
+                    <p style="text-align:justify;">
+
+                        To take this quiz, begin by navigating through the questions using the "Previous" and "Next"
+                        buttons
+                        located below the question area or left and right side of your screen respectively. Each
+                        question is presented within a carousel format, where you can
+                        read the question and select your answer by clicking on one of the provided options (labeled A,
+                        B,
+                        C, or D). The quiz allows you to move back and forth between questions using the navigation
+                        buttons.
+                        Once you have answered all questions to your satisfaction, click the "Submit" button at the
+                        bottom or left side
+                        of the quiz to finalize your responses.<b>Good luck!</b><br>
+                        Correct selection will turn into <b class="text-success">Green</b> and incorrect selecton will turn into <b class="text-danger">Red</b>.
+                    </p>
+
+                </div>
+
+                <footer class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal" id="result">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h3 class="modal-title">Instructions:</h3>
+
+                </header>
+                <div class="modal-body">
+
+                    <div class="box">
+                        <div class="marks">
+                            Total Marks
+                            <div class="marks-box">10</div>
+                        </div>
+                        <div class="marks">
+                            Obtained Marks
+                            <div class="obt-marks marks-box"></div>
+                        </div>
+
+                    </div>
+                    <div class="feedback"></div>
+
+
+                </div>
+
+                <footer class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container p-4 d-flex align-items-center justify-content-center" id="container"
+        style="min-height: 80vh; margin-top: 30px;">
+
+        <a href="#myCarousel" id="prevButton" class="btn btn-primary" data-bs-slide="prev">Previous</a>
+        <!--prev  button -->
+
+        <div class="row m-3">
+            <div class="col-12">
+
+
+
+                <div class="carousel slide" id="myCarousel">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active "> <!--end-->
+                            <!-- MCQ 1 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+                                        <dl>
+                                            <dt>Question # 1:</dt>
+                                            <dd>
+                                                What is the output of the following code?<br>
+                                                int x = 10;
+                                                <br>int *ptr = &x;
+                                                <br>*ptr = 20;<br>cout << x; </dd>
+                                        </dl>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option1" id="radio1" class="options wrong">
+                                    <label for="radio1" class="rounded-3">10</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option1" id="radio2" class="options answer">
+                                    <label for="radio2" class="rounded-3">20</label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option1" id="radio3" class="options wrong">
+                                    <label for="radio3" class="rounded-3">Error</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option1" id="radio4" class="options wrong">
+                                    <label for="radio4" class="rounded-3">Garbage value</label>
+
+                                </div>
+                            </div>
+
+
+                        </div><!--end-->
+
+
+                        <div class="carousel-item  ">
+                            <!-- MCQ 1 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+
+                                        <dl>
+                                            <dt>Question # 2:</dt>
+                                            <dd>
+                                                Which of the following statements is true about destructors in C++?
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option2" id="radio5" class="options wrong">
+                                    <label for="radio5" class="rounded-3">Destructors can take arguments.</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option2" id="radio6" class="options wrong">
+                                    <label for="radio6" class="rounded-3">Destructors can be overloaded.</label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option2" id="radio7" class="options wrong">
+                                    <label for="radio7" class="rounded-3">
+                                        A class can have more than one destructor.
+                                    </label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option2" id="radio8" class="options answer">
+                                    <label for="radio8" class="rounded-3">A destructor is called when an object goes out
+                                        of scope.
+                                    </label>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        <div class="carousel-item">
+                            <!-- MCQ 3 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+
+                                        <dl>
+                                            <dt>Question # 3:</dt>
+                                            <dd>
+                                                What is the output of the following code?
+                                                <br>int a = 5;<br>
+                                                int b = 10;<br>
+                                                int *p1 = &a;<br>
+                                                int *p2 = &b;<br>
+                                                p1 = p2;<br>
+                                                cout << *p1;<br>
+
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option3" id="radio9" class="options wrong">
+                                    <label for="radio9" class="rounded-3">5</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option3" id="radio10" class="options answer">
+                                    <label for="radio10" class="rounded-3">10</label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option3" id="radio11" class="options wrong">
+                                    <label for="radio11" class="rounded-3">Error</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option3" id="radio12" class="options wrong">
+                                    <label for="radio12" class="rounded-3">0</label>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="carousel-item"> <!--start-->
+                            <!-- MCQ 1 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+                                        <dl>
+                                            <dt>Question # 4:</dt>
+                                            <dd>
+                                                What does the following function return? <br>
+                                                int func(int a, int b) {<br>
+                                                if (a > b) return a;<br>
+                                                else return b;<br>
+                                                }<br>
+                                            </dd>
+                                        </dl>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option4" id="radio13" class="options wrong">
+                                    <label for="radio13" class="rounded-3">The smaller of a and b</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option4" id="radio14" class="options answer">
+                                    <label for="radio14" class="rounded-3"> The larger of a and b</label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option4" id="radio15" class="options wrong">
+                                    <label for="radio15" class="rounded-3">The sum of a and b</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option4" id="radio16" class="options wrong">
+                                    <label for="radio16" class="rounded-3">The difference between a and b</label>
+
+                                </div>
+                            </div>
+
+
+                        </div><!--end-->
+
+
+
+
+
+                        <div class="carousel-item"> <!--start-->
+                            <!-- MCQ 1 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+                                        <dl>
+                                            <dt>Question # 5:</dt>
+                                            <dd>
+                                                Which of the following is not a valid preprocessor directive in C++?
+
+                                            </dd>
+                                        </dl>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option5" id="radio17" class="options wrong">
+                                    <label for="radio17" class="rounded-3">#define</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option5" id="radio18" class="options wrong">
+                                    <label for="radio18" class="rounded-3">#include</label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option5" id="radio19" class="options wrong">
+                                    <label for="radio19" class="rounded-3">#pragma</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option5" id="radio20" class="options answer">
+                                    <label for="radio20" class="rounded-3">#using</label>
+
+                                </div>
+                            </div>
+
+
+                        </div><!--end-->
+
+
+
+
+
+                        <div class="carousel-item"> <!--start-->
+                            <!-- MCQ 1 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+                                        <dl>
+                                            <dt>Question # 6:</dt>
+                                            <dd>
+                                                What will be the output of the following code?<br>
+                                                int arr[] = {1, 2, 3, 4, 5};<br>
+                                                cout << *(arr + 3);<br>
+                                            </dd>
+                                        </dl>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option6" id="radio21" class="options wrong">
+                                    <label for="radio21" class="rounded-3">1</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option6" id="radio22" class="options wrong">
+                                    <label for="radio22" class="rounded-3">2</label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option6" id="radio23" class="options wrong">
+                                    <label for="radio23" class="rounded-3">3</label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option6" id="radio24" class="options answer">
+                                    <label for="radio24" class="rounded-3">4</label>
+
+                                </div>
+                            </div>
+
+
+                        </div><!--end-->
+
+
+
+
+
+
+                        <div class="carousel-item"> <!--start-->
+                            <!-- MCQ 1 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+                                        <dl>
+                                            <dt>Question # 7:</dt>
+                                            <dd>
+                                                What is a correct statement about inheritance in C++?
+
+
+
+                                            </dd>
+                                        </dl>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option7" id="radio25" class="options wrong">
+                                    <label for="radio25" class="rounded-3">Private members of the base class are
+                                        accessible to derived class.
+                                    </label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option7" id="radio26" class="options answer">
+                                    <label for="radio26" class="rounded-3">Public members of the base class are
+                                        accessible to derived class.
+                                    </label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option7" id="radio27" class="options wrong">
+                                    <label for="radio27" class="rounded-3" style="font-size: 13px;">Protected members of
+                                        the base class are not accessible to derived class.
+                                    </label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option7" id="radio28" class="options wrong">
+                                    <label for="radio28" class="rounded-3">All members of the base class are accessible
+                                        to derived class.
+                                    </label>
+
+                                </div>
+                            </div>
+
+
+                        </div><!--end-->
+
+
+
+
+                        <div class="carousel-item"> <!--start-->
+                            <!-- MCQ 1 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+                                        <dl>
+                                            <dt>Question # 8:</dt>
+                                            <dd>
+                                                What will be the output of the following code?<br>
+                                                int x = 5;<br>
+                                                int y = 10;<br>
+                                                int &ref = x;<br>
+                                                ref = y;<br>
+                                                cout << x;<br>
+
+
+
+                                            </dd>
+                                        </dl>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option8" id="radio29" class="options wrong">
+                                    <label for="radio29" class="rounded-3">5
+                                    </label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option8" id="radio30" class="options answer">
+                                    <label for="radio30" class="rounded-3">10
+                                    </label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option8" id="radio31" class="options wrong">
+                                    <label for="radio31" class="rounded-3">Error
+                                    </label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option8" id="radio32" class="options wrong">
+                                    <label for="radio32" class="rounded-3">0</label>
+
+                                </div>
+                            </div>
+
+
+                        </div><!--end-->
+
+
+
+                        <div class="carousel-item"> <!--start-->
+                            <!-- MCQ 1 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+                                        <dl>
+                                            <dt>Question # 9:</dt>
+                                            <dd>
+                                                Which of the following is true about virtual functions in C++?
+
+
+
+                                            </dd>
+                                        </dl>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option9" id="radio33" class="options wrong">
+                                    <label for="radio33" class="rounded-3">They cannot be overridden in derived classes.
+                                    </label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option9" id="radio34" class="options answer">
+                                    <label for="radio34" class="rounded-3">
+                                        They allow late binding.
+                                    </label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option9" id="radio35" class="options wrong">
+                                    <label for="radio35" class="rounded-3">They can only be used with pointers and references.
+
+                                    </label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option9" id="radio36" class="options wrong">
+                                    <label for="radio36" class="rounded-3">They are declared using the keyword virtual in the derived class.</label>
+
+                                </div>
+                            </div>
+
+
+                        </div><!--end-->
+
+
+
+
+
+
+                        <div class="carousel-item"> <!--start-->
+                            <!-- MCQ 1 -->
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+
+                                    <div class="question">
+                                        <!-- MCQ Question-->
+                                        <dl>
+                                            <dt>Question # 10:</dt>
+                                            <dd>
+                                                What is the output of the following code?<br>
+
+                                                class Base {<br>
+                                                    public:<br>
+                                                        Base() { cout << "Base"; }<br>
+                                                    };<br>
+                                                    
+                                                    class Derived : public Base {<br>
+                                                    public:<br>
+                                                        Derived() { cout << "Derived"; }<br>
+                                                    };<br>
+                                                    
+                                                    int main() {<br>
+                                                        Derived d;<br>
+                                                        return 0;<br>
+                                                    }<br>
+
+
+
+                                            </dd>
+                                        </dl>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="row"> <!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option10" id="radio37" class="options answer">
+                                    <label for="radio37" class="rounded-3">BaseDerived
+                                    </label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option10" id="radio38" class="options wrong">
+                                    <label for="radio38" class="rounded-3">DerivedBase
+                                    </label>
+
+                                </div>
+                            </div>
+
+                            <div class="row"><!--Options-->
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option10" id="radio39" class="options wrong">
+                                    <label for="radio39" class="rounded-3">Derived
+                                    </label>
+
+                                </div>
+
+                                <div class="col-6 options-col">
+
+                                    <input type="radio" name="option10" id="radio40" class="options wrong">
+                                    <label for="radio40" class="rounded-3">Derived</label>
+
+                                </div>
+                            </div>
+
+
+                        </div><!--end-->
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <a href="#myCarousel" id="nextButton" class="btn btn-primary px-4"
+            data-bs-slide="next">Next</a><!--Next  button -->
+
+        <input type="submit" id="submitbtn" class="btn">
+
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/slider.js"></script>
+
+
+
+</body>
+
+</html>
